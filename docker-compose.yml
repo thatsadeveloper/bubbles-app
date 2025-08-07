@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: bubbles
+      POSTGRES_USER: bubbles
+      POSTGRES_PASSWORD: bubbles
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+volumes:
+  db-data:
+  redis-data:
+
+

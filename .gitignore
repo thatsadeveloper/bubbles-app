@@ -1,0 +1,101 @@
+# Root env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archives/artifacts
+*.zip
+*.tar
+*.gz
+*.jar
+*.war
+
+# Docker data (if used)
+docker-data/
+postgres-data/
+redis-data/
+
+# Audio/cache/temp
+bubbles-audio/
+audio/
+tmp/
+backend/tmp/
+
+# Frontend (Next.js / Node)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/coverage/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Next.js build cache files
+frontend/.next/cache/
+
+# Backend (Java/Gradle)
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+
+# Gradle at root (if used)
+.gradle/
+build/
+out/
+
+# IntelliJ build output
+**/classes/
+
+# Node
+node_modules/
+.next/
+out/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.eslintcache
+
+# Java/Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+.idea/
+.project
+.classpath
+.settings/
+*.iml
+
+# Env
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+

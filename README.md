@@ -69,7 +69,7 @@ Backend reads env via `application.yml`. Frontend reads `NEXT_PUBLIC_API_BASE_UR
 #### 3) Run backend (Spring Boot)
 ```bash
 cd backend
-./gradlew bootRun
+../scripts/dev-backend.sh
 ```
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - Health: `http://localhost:8080/actuator/health`
@@ -97,6 +97,11 @@ Open `http://localhost:3000`.
 - `OPENAI_TTS_MODEL`: TTS model (default `tts-1`)
 - `OPENAI_TTS_VOICE`: voice (default `alloy`)
 - `AUDIO_STORAGE_DIR`: server path where TTS audio files are stored (default: system temp dir + `/bubbles-audio`)
+
+#### Local env setup
+- Copy `env.example` to `.env` at the repo root and fill in values.
+- `.env` is gitignored. Scripts will load it automatically.
+- On macOS/Linux: `scripts/dev-backend.sh`; on Windows: `scripts/dev-backend.cmd`.
 
 ### Text-to-Speech (TTS) persistence
 - When you click Play in the Conversation tab, the backend synthesizes audio via OpenAI’s Audio Speech API.

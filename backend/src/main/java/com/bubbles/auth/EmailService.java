@@ -16,8 +16,8 @@ public class EmailService {
     private final String frontendBaseUrl;
 
     public EmailService(JavaMailSender mailSender,
-                        @Value("${MAIL_FROM:noreply@bubbles.app}") String from,
-                        @Value("${FRONTEND_BASE_URL:http://localhost:3000}") String frontendBaseUrl) {
+                        @Value("${mail.from:noreply@bubbles.app}") String from,
+                        @Value("${frontend.base-url:http://localhost:3000}") String frontendBaseUrl) {
         this.mailSender = mailSender;
         this.from = from;
         this.frontendBaseUrl = frontendBaseUrl;
